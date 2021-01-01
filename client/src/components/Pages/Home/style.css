@@ -8,11 +8,18 @@
 }
 
 .login-box {
-    height: 350px;
-    width: 700px;
-    background-color: red;
+    height: 408px;
+    width: 784px;
+    background-color: #36393f;
+    border-radius: 5px;
 }
 
 .login-box .container .login-heading {
     text-align: center;
+    margin: 20px;
+}
+
+.login-inputs {
+    background-color: '#303339';
+    border: 'black';
 }
