@@ -37,7 +37,7 @@ function Home() {
                                 <p style={{ color: 'grey' }}>We're so excited to see you again!</p>
                             </div>
                         </div>
-                        <div className="login-form row">
+                        <div className="login-form row mx-2">
                             <div className="col-12">
                                 <Form onSubmit={handleSubmit}>
                                     <Form.Group id="email">
@@ -55,7 +55,7 @@ function Home() {
                                 </Form>
                             </div>
                         </div>
-                        <div className="login-bottom row mt-2">
+                        <div className="login-bottom row mt-2 mx-2">
                             <div className="col-12">
                                 <p style={{fontSize: '15px', color: '#4e5157'}}>Need an account? <Link to="/signup" style={{color: '#7289da'}}>Register</Link></p>
                             </div>
