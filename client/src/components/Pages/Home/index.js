@@ -24,6 +24,7 @@ function Home() {
         } catch {
             setError("Failed to log in")
         }
+        setLoading(false);
     }
 
     return (
@@ -33,23 +34,27 @@ function Home() {
                     <div className="container">
                         <div className="login-heading row">
                             <div className="col-12">
-                                <h4 style={{ color: 'white' }}>Welcome back</h4>
+                                <h3 style={{ color: 'white' }}>Welcome back</h3>
                                 <p style={{ color: 'grey' }}>We're so excited to see you again!</p>
                             </div>
                         </div>
                         <div className="login-form row mx-2">
                             <div className="col-12">
-                                <Form onSubmit={handleSubmit}>
+                                <Form id="loginForm" onSubmit={handleSubmit}>
                                     <Form.Group id="email">
-                                        <Form.Label style={{color: '#82868b', fontSize: '11px', fontWeight: 'bolder'}}>EMAIL OR PHONE NUMBER</Form.Label>
-                                        <Form.Control type="email" style={{backgroundColor: '#303339', border: 'black'}} ref={emailRef} required />
+                                        <Form.Label>
+                                            {(error) ? <span style={{color: 'red'}}>EMAIL OR PHONE NUMBER - <em>Login or password is invalid</em></span> : <span>EMAIL OR PHONE NUMBER</span>}
+                                        </Form.Label>
+                                        <Form.Control type="email" className="login-inputs" ref={emailRef} required />
                                     </Form.Group>
                                     <Form.Group id="password" style={{marginBottom: '0px'}}>
-                                        <Form.Label style={{color: '#82868b', fontSize: '11px', fontWeight: 'bolder'}}>PASSWORD</Form.Label>
-                                        <Form.Control type="password" style={{backgroundColor: '#303339', border: 'black'}}ref={passwordRef} required />
+                                        <Form.Label>
+                                            {(error) ? <span style={{color: 'red'}}>PASSWORD - <em>Login or password is invalid</em></span> : <span>PASSWORD</span>}
+                                        </Form.Label>
+                                        <Form.Control type="password" className="login-inputs" ref={passwordRef} required />
                                     </Form.Group>
-                                    <Link to="/recoverpassword" style={{color: '#7289da'}}>Forgot your password?</Link>
-                                    <Button disabled={loading} className="w-100 mt-3" style={{backgroundColor: '#7289da', fontWeight: 'bolder'}} type="submit">
+                                    <Link to="/recoverpassword" style={{color: '#7289da', fontSize: '13px'}}>Forgot your password?</Link>
+                                    <Button disabled={loading} className="w-100 mt-3 login-button" type="submit">
                                         Login
                                     </Button>
                                 </Form>
@@ -57,7 +62,7 @@ function Home() {
                         </div>
                         <div className="login-bottom row mt-2 mx-2">
                             <div className="col-12">
-                                <p style={{fontSize: '15px', color: '#4e5157'}}>Need an account? <Link to="/signup" style={{color: '#7289da'}}>Register</Link></p>
+                                <p style={{fontSize: '13px', color: '#4e5157'}}>Need an account? <Link to="/signup" style={{color: '#7289da'}}>Register</Link></p>
                             </div>
                         </div>
                     </div>

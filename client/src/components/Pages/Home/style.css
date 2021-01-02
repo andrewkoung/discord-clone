@@ -12,6 +12,7 @@
     width: 784px;
     background-color: #36393f;
     border-radius: 5px;
+    box-shadow: 1px 1px 5px black;
 }
 
 .login-box .container .login-heading {
@@ -19,7 +20,19 @@
     margin: 20px;
 }
 
-.login-inputs {
-    background-color: '#303339';
-    border: 'black';
+#loginForm .form-group .login-inputs {
+    background-color: #303339;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#loginForm .form-group .form-label {
+    color: #82868b;
+    font-size: 11px; 
+    font-weight: bolder;
+}
+
+#loginForm .login-button {
+    background-color: #7289da; 
+    font-weight: bolder;
 }
