@@ -1,0 +1,38 @@
+#signupBackground {
+    background-image: url("../../../media/discord-login-background.jpg");
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+.signup-box {
+    height: 562px;
+    width: 480px;
+    background-color: #36393f;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px black;
+}
+
+.signup-box .container .signup-heading {
+    text-align: center;
+    margin: 20px;
+}
+
+#signupForm .form-group .signup-inputs {
+    background-color: #303339;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#signupForm .form-group .form-label {
+    color: #82868b;
+    font-size: 11px; 
+    font-weight: bolder;
+}
+
+#signupForm .login-button {
+    background-color: #7289da; 
+    font-weight: bolder;
+}

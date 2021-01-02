@@ -12,12 +12,12 @@ const withAuthentication = (Component) => {
         const [currentUser, setCurrentUser] = useState();
         const [loading, setLoading] = useState(true) 
 
-        function signup(firstName, lastName, email, password) {
+        function signup(email, username, password, dob) {
             let obj = firebase.auth.createUserWithEmailAndPassword(email, password).then(authUser => {
                 firebase.user(authUser.user.uid).set({
-                    firstName,
-                    lastName,
                     email,
+                    username,
+                    dob
                 })
             })
             .catch(error => {

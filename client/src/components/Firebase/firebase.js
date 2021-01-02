@@ -19,6 +19,9 @@ class Firebase {
         this.auth = firebase.auth();
         this.db = firebase.database();
     }
+
+    // Real-time DB paths
+    user = uid => this.db.ref(`users/${uid}`);
 }
 
 export default Firebase;
