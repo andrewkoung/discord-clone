@@ -3,7 +3,9 @@ import { withFirebase } from './../../Firebase';
 function Dashboard({ firebase }) {
     return (
         <>
-            <p>Dashboard</p>
+            <div className="dashboard">
+
+            </div>
         </>
     )
 }
