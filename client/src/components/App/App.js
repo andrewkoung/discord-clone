@@ -8,6 +8,7 @@ import Signup from "../Pages/Signup";
 
 function App() {
   return (
+    
     <Router>
       <Switch>
         <Route exact path="/" component={Home} />
